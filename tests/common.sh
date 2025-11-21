@@ -6,7 +6,7 @@ WD=$(cd "$WD"; pwd)
 if [[ -n "${GATEWAYS}" ]]; then
   IFS=',' read -r -a gateways <<< "$GATEWAYS"
 else
-  gateways=(agentgateway/agentgateway  envoy/envoy-gateway istio/istio nginx/nginx)
+  gateways=(gke-gateway/gke-gateway)
 fi
 
 function gw-address() {
